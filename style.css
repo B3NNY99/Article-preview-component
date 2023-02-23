@@ -1,0 +1,201 @@
+body {
+    background-color: hsl(212, 23%, 69%);
+    font-family: 'Manrope', sans-serif;
+}
+
+main {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenitore {
+    background-color: white;
+    display: grid;
+    margin: 1.2rem;
+    border-radius: 20px;
+}
+
+.product-img {
+    width: 100%;
+    border-radius: 20px 20px 0 0 ;
+}
+
+/* SECOND COLUMN*/
+.column2 {
+    padding: 0.8rem 2rem;
+}
+
+.titolo {
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+}
+
+.description {
+    font-size: 0.8rem;
+    color: hsl(214, 17%, 51%);
+}
+
+/* POSTER PART*/
+.creator {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.6rem;
+}
+
+.creator-type {
+    display: flex;
+}
+
+.imgAndName {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 0.8rem;
+}
+
+.creator-img {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+}
+
+.date {
+    color: hsl(214, 17%, 51%);
+}
+
+
+.icon-share {
+    padding: 0.7rem;
+    background: hsl(210, 46%, 95%);
+    border-radius: 50%;
+}
+
+.icon-share-clicked{
+    background-color: hsl(214, 17%, 51%);
+}
+
+.icon-share-clicked path {
+    fill: #ffffff;
+  }
+
+/* SOCIALS*/
+.social {
+    display: none;
+    background-color: hsl(217, 19%, 35%);
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    align-items: center;
+    border-radius: 0 0 20px 20px ;
+    color: hsl(214, 17%, 51%);
+    letter-spacing: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.social-type {
+    display: flex;
+}
+
+.social-icons {
+    display: grid;
+    align-items: center;
+    gap: 15px;
+    grid-template-columns: 1fr 20px 20px 20px;
+}
+
+.icon-social {
+    background-color: hsl(214, 17%, 51%);
+}
+
+.popup {
+    display: none;
+}
+/* FOOTER*/
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* desktop size*/
+
+@media(min-width:788px) {
+
+    .contenitore {
+        max-width: 40rem;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .product-img {
+        height: 100%;
+        border-radius: 20px 0 0 20px;
+        object-fit: cover;
+    }
+
+    .titolo{
+        font-size: 1.2rem;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .icon-creator{
+        width: 15px;
+    }
+
+    .popup {
+        display: none;
+        position: absolute;
+        width: 170px;
+        height: 40px;
+        background-color: hsl(217, 19%, 35%);
+        border-radius: 10px;
+        align-items: center;
+        column-gap: 15px;
+        grid-template-columns: 65px 20px 20px 20px;
+        padding: 0.5rem 1rem 0 1rem;
+    }
+
+    .popup-type{
+        display: grid;
+    }
+
+    .share{
+        margin: 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.3rem;
+        color: hsl(214, 17%, 51%);
+        width: max-content;
+        
+    }
+
+    .bottom-arrow{
+        border-bottom: 0px solid white;
+    }
+
+    .bottom-arrow:after {
+        content:'';
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        height: 0;
+        border-top: 15px solid hsl(217, 19%, 35%);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+    }
+
+}
